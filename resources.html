@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Catriona Silvey - Resources</title>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" />
+  <link rel="stylesheet" media="all" href="style/style.css" />
+  <link rel="stylesheet" media="only screen and (max-width: 815px)" href="style/mobile.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <link rel="icon" type="image/ico" href="images/favicon.ico" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+	<a href="index.html"><img src="images/newpic.jpg" alt="Catriona Silvey" class="logoimage" /></a>
+        <a href="index.html"><h1>Catriona Silvey</h1></a>
+	<h4><a href="http://www.ucl.ac.uk/pals">Division of Psychology and Language Sciences</a>, <a href="http://www.ucl.ac.uk">University College London</a></h4>
+	<h4>Room 302, Chandler House, Wakefield Street, London WC1N 1PF</h4>
+	<h5>c.silvey @ ucl.ac.uk</h5>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <li><a href="index.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+		  <li class="current"><a href="resources.html">Resources</a></li>
+          <li><a href="fiction.html">Fiction</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="content_image_left"><img src="images/xkcd_frame41.png" alt="xkcd image left"/></div>
+      <div id="content">
+	  <h1>Resources</h1>
+		<p><a href="https://github.com/silveycat/">GitHub</a>
+		<p><a href="https://osf.io/s37v6/">OSF</a>
+		<p>I build my experiments using <a href="http://www.psychopy.org/">PsychoPy</a>, an open-source <a href="http://www.python.org/">Python</a>-based application. Occasionally I post snippets of useful code for non-built-in functions - feel free to use them:</p>
+		<h2>Collecting keyboard input and mirroring onscreen</h2>
+		<p>One built-in function I missed from E-Prime was the ability to collect text input from the user and show it in the experiment window
+		as they are typing it. This simple block of code will do that - just adjust the position of the TextStim to suit you. This code collects
+		the input in the variable text, which you can then store in your output/write to a file as needed.</p>
+		<!-- code formatted by http://manoli.net/csharpformat/ -->
+<pre class="csharpcode">
+text=<span class="rem">''</span>
+<span class="str">#until return pressed, listen for letter keys &amp; add to text string</span>
+<span class="key">while</span> event.getKeys(keyList=[<span class="rem">'return'</span>])==[]:
+    letterlist=event.getKeys(keyList=[<span class="rem">'q'</span>,<span class="rem">'w'</span>,<span class="rem">'e'</span>,<span class="rem">'r'</span>,<span class="rem">'t'</span>,<span class="rem">'y'</span>,<span class="rem">'u'</span>,<span class="rem">'i'</span>,<span class="rem">'o'</span>,<span class="rem">'p'</span>,<span class="rem">'a'</span>,<span class="rem">'s'</span>,<span class="rem">'d'</span>,<span class="rem">'f'</span>,
+	<span class="rem">'g'</span>,<span class="rem">'h'</span>,<span class="rem">'j'</span>,<span class="rem">'k'</span>,<span class="rem">'l'</span>,<span class="rem">'z'</span>,<span class="rem">'x'</span>,<span class="rem">'c'</span>,<span class="rem">'v'</span>,<span class="rem">'b'</span>,<span class="rem">'n'</span>,<span class="rem">'m'</span>,<span class="rem">'backspace'</span>])
+    <span class="key">for</span> l <span class="key">in</span> letterlist:
+        <span class="str">#if key isn't backspace, add key pressed to the string</span>
+        <span class="key">if</span> l !=<span class="rem">'backspace'</span>:
+	    text+=l
+        <span class="str">#otherwise, take the last letter off the string</span>
+        <span class="key">elif</span> <span class="func">len</span>(text)<span class="kwrd">&gt;</span>0:
+	    text=text[:-1]
+    <span class="str">#continually redraw text onscreen until return pressed</span>
+    response = visual.TextStim(win, text=text,color=<span class="rem">"black"</span>,pos=(0,-100))
+    response.draw()
+    win.flip()
+event.clearEvents()</pre>
+</div>
+      <div class="content_image_right"><img src="images/xkcd_frame42.png"/ alt="xkcd image right"></div>
+    </div>
+    <div id="footer">
+      <p id="img-credit">images reproduced from <a href="http://xkcd.com/1028/">xkcd #1028</a></p>
+      <p>website design by <a href="http://christos-c.com/">Christos Christodoulopoulos</a></p>
+    </div>
+  </div>
+</body>
+</html>
+		

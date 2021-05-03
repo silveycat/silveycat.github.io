@@ -1,0 +1,251 @@
+html
+{ height: 100%;}
+
+*
+{ margin: 0;
+  padding: 0;}
+
+body
+{ font: normal .80em 'trebuchet ms', arial, sans-serif;
+  background-color: #F7F7F7;
+  color: #555;}
+
+p
+{ padding: 0 0 20px 0;
+  line-height: 1.5em;
+  font-size: 107%;}
+
+img
+{ border: 0;}
+
+a, a:hover
+{ outline: none;
+  text-decoration: none;
+  color: #35BDF5;}
+
+a:hover
+{ text-decoration: underline;}
+
+#main
+{ max-width: 960px;
+  margin: 20px auto;
+  padding: 0 150px;}
+
+
+/* ------------------ HEADER ------------------ */
+/*#header
+{ height: 133px;}*/
+
+#logo
+{ float: left;
+  height: 90px;
+  background: transparent;
+  padding: 0 0 0px 10px;}
+
+.logoimage
+{ float: left;
+  width: 113px;
+  height: 150px;
+  margin: 0 0 -30px -30px;
+  position: relative;
+  z-index: 100;
+  border-radius: 7px;
+  box-shadow: 2px 5px 10px #333;}
+
+#menubar
+{ width: 100%;
+  margin: 2em auto -1px auto;
+  float: right;
+  position: relative;
+  z-index: 20;}
+
+ul#menu
+{ float: right;}
+
+ul#menu li
+{ float: left;
+  list-style: none;
+  margin: 2px 0 0 0;
+  background: transparent;}
+
+ul#menu li a
+{ font: normal 170% 'Yanone Kaffeesatz', sans-serif;
+  text-decoration: none;
+  color: #444;
+  display: block; 
+  float: left; 
+  height: 20px;
+  padding: 7px 23px 15px 23px;
+  text-align: center;} 
+
+ul#menu li.current a
+{ height: 20px;
+  padding: 6px 22px 15px 22px;}
+
+ul#menu li.current a
+{ background: #fff;
+  border: 1px solid #E7E7E7;
+  border-bottom: 0;
+  color: #F14E23;}
+
+ul#menu li a:hover
+{ color: #F14E23;}
+
+/* ------------------ CONTENT ------------------ */
+#site_content
+{ float:left;
+  position: relative;
+  background: #fff;
+  border: 1px solid #E7E7E7;}
+
+.content_image_left
+{ position: absolute;
+  top: 20px;
+  left: -180px;
+  z-index: 0;
+  opacity:0.2;}
+
+.content_image_right
+{ position: absolute;
+  right: -130px;
+  top: 20px;
+  z-index: 0;
+  opacity:0.2;}
+
+#sidebar_container
+{ float: right;
+  margin: 25px 0 0 10px;}
+
+.sidebar
+{ float: right;
+  width: 230px;
+  margin: 0 24px 27px 0;}
+
+#content_pers
+{ text-align: left;
+  padding: 25px 5px 5px 25px;
+  margin: 0;}
+
+#content
+{ text-align: left;
+  position: relative;
+  z-index: 1000;
+  padding: 25px 5px 5px 25px;}
+
+/* ------------------ FOOTER ------------------ */
+#footer
+{ clear: both;
+  width: 100%;
+  font: normal 100% 'yanone kaffeesatz',  arial, sans-serif;
+  height: 85px;
+  padding: 20px 0 5px 0;
+  text-align: center; 
+  color: #555;
+  background: transparent;
+  margin-bottom: 20px;}
+
+#footer p
+{ padding: 0 0 10px 0;}
+
+#footer a, #footer a:hover
+{ color: #222;
+  text-decoration: none;
+  border-bottom: 1px dashed #222;}
+
+#footer a:hover
+{ color: #35BDF5;
+   border-bottom:none;}
+
+
+/* ------------------ FONTS ------------------ */
+h1, h2, h3, h4, h5, h6 
+{ font: normal 250% 'Yanone Kaffeesatz', arial, sans-serif;
+  color: #444;
+  margin: 0 0 15px 0;
+  padding: 5px 0 5px 0;}
+
+h2
+{ font: normal 170% 'Yanone Kaffeesatz', arial, sans-serif;
+  color: #F14E23;  
+  margin: 0;
+  padding: 0 0 8px 0;}
+
+h3
+{ font-size: 200%;
+  margin: 0 0 9px 0;
+  color: #444;}
+
+h4, h5, h6
+{ margin: 0;
+  padding: 0 0 5px 0;
+  font: normal 100% arial, sans-serif;
+  color: #F14E23;
+  line-height: 1em;}
+
+#logo a, a:hover
+{ text-decoration: none;}
+
+#logo h1, h4, h5
+{ padding: 0 0 0 100px;}
+
+#logo h1
+{ font: normal 350% 'Yanone Kaffeesatz', arial, sans-serif;
+  margin: 0 0 5px 0;
+  color: #555;}
+
+#logo h4
+{ font: normal 95% arial, sans-serif;
+  color: #F14E23;
+  margin: 0 0 3px 0;}
+
+#logo h4 a
+{ color: #35BDF5;}
+
+#logo h4 a:hover
+{ color: #555;}
+ 
+#logo h5
+{ font: italic 95% arial, sans-serif;
+  color: #888;}
+  
+  
+/* -------- CODE SNIPPET --------- */
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: Consolas, "Courier New", Courier, Monospace;
+	background: #fff;
+	white-space: pre-wrap;
+}
+
+.csharpcode pre { margin: 0em; }
+
+.csharpcode .rem { color: #008000; }
+
+.csharpcode .kwrd { color: #0000ff; }
+
+.csharpcode .str { color: #cc0000; }
+
+.csharpcode .op { color: #0000c0; }
+
+.csharpcode .preproc { color: #cc6633; }
+
+.csharpcode .asp { background-color: #ffff00; }
+
+.csharpcode .html { color: #800000; }
+
+.csharpcode .attr { color: #ff0000; }
+
+.csharpcode .func { color: #b23aee}
+
+.csharpcode .key { color: #ff9912}
+
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+
+.csharpcode .lnum { color: #606060; }
